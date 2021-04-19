@@ -1,0 +1,29 @@
+var app = angular.module("myApp", ["ngRoute","angular-md5","ngMessages","ngMaterial","angular-barcode","chart.js","monospaced.qrcode","ngResource","smart-table","xeditable"]);
+
+
+app.run(function(editableOptions,editableThemes) {
+    editableOptions.theme = 'bs3';
+    editableThemes['bs3'].submitTpl = '<button type="submit"><i class="fas fa-check text-success"></i></button>';
+    editableThemes['bs3'].cancelTpl = '<button type="submit"><i class="fas fa-ban text-danger"></i></button>';
+});
+
+
+
+-----------------------------------------------------------------------------------------
+ <a href="#" editable-text="user.name" onbeforesave="updateUser(user,$data)">
+                                {{ user.name || 'empty' }}
+                            </a>
+-----------------------------------------------------------------------------------------
+
+$scope.user = {
+        name: 'awesome user',
+        dob: new Date(1984, 0,4)
+};
+
+
+$scope.updateUser = function(user,data) {
+        console.log(user);
+        user.name=data;
+        return true;
+};							
+							

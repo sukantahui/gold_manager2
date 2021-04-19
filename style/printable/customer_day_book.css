@@ -1,0 +1,22 @@
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+body{
+    line-height: unset;
+}
+
+td{
+    color: #232121;
+}
+.table th, .table td{
+    padding: 0 !important;
+    font-size: x-small;
+}
+
+.btn{
+    padding: 0 !important;
+}
