@@ -47,4 +47,5 @@ package-lock.json
 
 #extras
 /node_modules_gold_manager2.rar
+/application/config/database.php
 
